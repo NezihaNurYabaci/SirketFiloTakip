@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Şirket Filo Takip</title>
+  <link rel="stylesheet" href="/assets/app.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">SF</div>
+        <div>
+          <strong>Şirket Filo Takip</strong>
+          <span>Yönetim Paneli</span>
+        </div>
+      </div>
+
+      <nav id="nav">
+        <button class="nav-item active" data-page="dashboard">Dashboard</button>
+        <button class="nav-item" data-page="araclar">Araçlar</button>
+        <button class="nav-item" data-page="calisanlar">Çalışanlar</button>
+        <button class="nav-item" data-page="gorevler">Görevler</button>
+        <button class="nav-item" data-page="yakit">Yakıt Kayıtları</button>
+        <button class="nav-item" data-page="bakim">Bakım Kayıtları</button>
+        <button class="nav-item" data-page="hasar">Hasar Kayıtları</button>
+        <button class="nav-item" data-page="raporlar">Raporlar</button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <span id="api-status" class="status-dot"></span>
+        <span>API bağlantısı</span>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h1 id="page-title">Dashboard</h1>
+          <p id="page-subtitle">Filo durumunu tek ekrandan yönetin.</p>
+        </div>
+        <button id="refresh-btn" class="btn ghost">Yenile</button>
+      </header>
+
+      <section id="content"></section>
+    </main>
+  </div>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-card">
+      <div class="modal-head">
+        <h3 id="modal-title">Form</h3>
+        <button class="icon-btn" data-close-modal>×</button>
+      </div>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <div id="toast-container" class="toast-container"></div>
+
+  <script src="/assets/app.js"></script>
+</body>
+</html>
